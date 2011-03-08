@@ -1,11 +1,11 @@
 miniManager support links:
 
-SVN:
-http://minimanager-tc.googlecode.com/svn/trunk/
+GIT:
+https://github.com/Mythos94/Minimanager-for-TrinityCore
 
 Official support forum:
 http://www.trinityscripts.xe.cx/
 
 
 Last Updated
-2/21/2010
+03/08/2011
