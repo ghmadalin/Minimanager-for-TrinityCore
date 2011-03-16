@@ -1,12 +1,12 @@
 -- Database: mmftc
 
 --
--- Table structure for table `mm_forum_posts`
+-- Table structure for table `mmftc_forum_posts`
 --
 
-DROP TABLE IF EXISTS `mm_forum_posts`;
+DROP TABLE IF EXISTS `mmftc_forum_posts`;
 
-CREATE TABLE `mm_forum_posts` (
+CREATE TABLE `mmftc_forum_posts` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `authorid` bigint(20) unsigned NOT NULL DEFAULT '0',
   `authorname` varchar(16) NOT NULL DEFAULT '',
@@ -23,23 +23,24 @@ CREATE TABLE `mm_forum_posts` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `mm_forum_posts`
+-- Dumping data for table `mmftc_forum_posts`
 --
 
-LOCK TABLES `mm_forum_posts` WRITE;
-/*!40000 ALTER TABLE `mm_forum_posts` DISABLE KEYS */;
-INSERT INTO `mm_forum_posts`(`id`,`authorid`,`authorname`,`forum`,`topic`,`lastpost`,`name`,`text`,`time`,`annouced`,`sticked`) values
+LOCK TABLES `mmftc_forum_posts` WRITE;
+/*!40000 ALTER TABLE `mmftc_forum_posts` DISABLE KEYS */;
+INSERT INTO `mmftc_forum_posts` (`id`,`authorid`,`authorname`,`forum`,`topic`,`lastpost`,`name`,`text`,`time`,`annouced`,`sticked`) VALUES
 (1,0,'miniManagerTeam',1,1,1,'Hello Admin!','[b]Hi[/b] !!:D<br /><br />If you are reading this, that means that you have [i]correctly[/i] installed this forum, XD<br /><br /><br /><br />So what\' s next?<br /><br />Edit [color=red]forum.conf.php[/color]<br /><br /><br /><br />And enjoy!<br /><br /><br /><br />Report bugs at [url=http://www.trintiyscripts.xe.cx]miniManager forums[/url]<br /><br /><br /><br />Bye!<br /><br />miniManagerTeam','00/00/00 00:00:00',1,0);
-/*!40000 ALTER TABLE `mm_forum_posts` ENABLE KEYS */;
+
+/*!40000 ALTER TABLE `mmftc_forum_posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `mm_motd`
+-- Table structure for table `mmftc_motd`
 --
 
-DROP TABLE IF EXISTS `mm_motd`;
+DROP TABLE IF EXISTS `mmftc_motd`;
 
-CREATE TABLE `mm_motd` (
+CREATE TABLE `mmftc_motd` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
   `realmid` int(11) NOT NULL,
   `type` longtext NOT NULL,
@@ -48,21 +49,23 @@ CREATE TABLE `mm_motd` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='MOTD System';
 
 --
--- Dumping data for table `mm_motd`
+-- Dumping data for table `mmftc_motd`
 --
 
-LOCK TABLES `mm_motd` WRITE;
-/*!40000 ALTER TABLE `mm_motd` DISABLE KEYS */;
-INSERT INTO `mm_motd` VALUES (1, 1, '02/05/10 14:29:07 Posted by: MiniManager Team', 'Hello Admin\r\n\r\nhelp supporting Minimanager\r\n\r\nhttp://www.trinityscripts.xe.cx\r\n\r\nif you found a bug or improved it, please contribute\r\n\r\nor it will eventually stop development from lack of interrest from community ');
-/*!40000 ALTER TABLE `mm_motd` ENABLE KEYS */;
+LOCK TABLES `mmftc_motd` WRITE;
+/*!40000 ALTER TABLE `mmftc_motd` DISABLE KEYS */;
+INSERT INTO `mmftc_motd` (`id`,`realmid`,`type`,content`) VALUES
+(1, 1, '02/05/10 14:29:07 Posted by: MiniManager Team', 'Hello Admin\r\n\r\nhelp supporting Minimanager\r\n\r\nhttp://www.trinityscripts.xe.cx\r\n\r\nif you found a bug or improved it, please contribute\r\n\r\nor it will eventually stop development from lack of interrest from community ');
+
+/*!40000 ALTER TABLE `mmftc_motd` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `mm_point_system_invites`
+-- Table structure for table `mmftc_point_system_invites`
 --
 
-DROP TABLE IF EXISTS `mm_point_system_invites`;
-CREATE TABLE `mm_point_system_invites` (
+DROP TABLE IF EXISTS `mmftc_point_system_invites`;
+CREATE TABLE `mmftc_point_system_invites` (
   `entry` int(11) NOT NULL auto_increment,
   `PlayersAccount` char(50) default NULL,
   `InvitedBy` char(50) default NULL,
@@ -73,12 +76,12 @@ CREATE TABLE `mm_point_system_invites` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Table structure for table `mm_account`
+-- Table structure for table `mmftc_account`
 --
 
-DROP TABLE IF EXISTS `mm_account`;
+DROP TABLE IF EXISTS `mmftc_account`;
 
-CREATE TABLE `mm_account` (
+CREATE TABLE `mmftc_account` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Identifier',
   `username` varchar(32) NOT NULL DEFAULT '',
   `sha_pass_hash` varchar(40) NOT NULL DEFAULT '',
