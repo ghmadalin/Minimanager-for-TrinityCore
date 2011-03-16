@@ -16,6 +16,7 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
+ $show_version = "0.1pre";
  
     //hide undefined variables in some cases (some errorpages for ex.)
     if (!isset($debug))
@@ -151,6 +152,7 @@
                     <table>';
     }
 
+echo "Version: " . $show_version;
 ?>
 
         </div>

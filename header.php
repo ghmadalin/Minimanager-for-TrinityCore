@@ -292,6 +292,7 @@ if (isset($_SESSION['user_lvl']) && isset($_SESSION['uname']) && isset($_SESSION
     unset($lang_header);
 
     //---------------------Version Information-------------------------------------
+ /*
     if ( $show_version['show'] && $user_lvl >= $show_version['version_lvl'] )
     {
         if ((1 < $show_version['show']) && $user_lvl >= $show_version['svnrev_lvl'])
@@ -328,6 +329,7 @@ else
                     <td class="table_top_right"></td>
                 </tr>
             </table>';
+			*/
 }
 
 //---------------------Start of Body-------------------------------------------

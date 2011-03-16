@@ -33,6 +33,7 @@ if (0 == $result)
 unset($telnet);
 
 $doutput = '';
+/*
 $show_version['svnrev'] = '';
 
 if ( is_readable('.svn/entries') )
@@ -43,7 +44,7 @@ if ( is_readable('.svn/entries') )
     unset($file_obj);
     $doutput .= 'MiniManager : '.$show_version['version'].' r'.$show_version['svnrev'];
 }
-
+*/
 $doutput .= 'Client: '.$_SERVER['HTTP_USER_AGENT'].' OS: '.php_uname('s').' '.php_uname('r').' '.php_uname('v').' '.php_uname('m').' http: '.$_SERVER['SERVER_SOFTWARE'].' PHP: '.phpversion().' '.php_sapi_name().' MySQL: '.mysql_get_server_info();
 
 if ($result)
